@@ -4,8 +4,10 @@
   box-sizing: border-box;
 }
 
+$ColorPlatano: #E3CF57;
+
 html, body {
-  background-color: #E3CF57;
+  background-color: $ColorPlatano;
 }
 
 .App {
@@ -15,17 +17,19 @@ html, body {
   justify-content: center;
   padding-top: 7px;
   font-family: Lato, sans-serif;
-}
-.App .freecodecamp-logo-contenedor {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
-  height: 150px;
-}
-.App .freecodecamp-logo-contenedor .freecodecamp-logo {
-  height: 100%;
+
+  .freecodecamp-logo-contenedor {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    height: 150px;
+
+    .freecodecamp-logo {
+      height: 100%;
+    }
+  }
 }
 
 .contenedor-principal {
@@ -36,4 +40,12 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}/*# sourceMappingURL=App.css.map */
+}
+
+@import 'Header';
+
+@mixin Estilos_Caja ($Radio) {
+    border-radius: $Radio;
+    box-shadow: 20px black;
+}
+
